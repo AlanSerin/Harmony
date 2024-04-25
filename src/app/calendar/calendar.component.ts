@@ -38,4 +38,25 @@ export class CalendarComponent {
   handleDateClick(arg: any) {
     alert('date click! ' + arg.dateStr);
   }
+
+  toggleFilter(index: number) {
+    if (index !== 0) {
+      this.filters[index].checked = !this.filters[index].checked;
+
+      if (
+        this.filters.find(
+          (filter) => filter.checked === false && filter.value !== 'all'
+        )
+      ) {
+        this.filters[0].checked = false;
+      } else {
+        this.filters[0].checked = true;
+      }
+    } else {
+      this.filters[0].checked = !this.filters[0].checked;
+      this.filters.forEach(
+        (filter) => (filter.checked = this.filters[0].checked)
+      );
+    }
+  }
 }

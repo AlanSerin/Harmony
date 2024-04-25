@@ -6,23 +6,50 @@
   margin-bottom: 16px;
 }
 
-.calendar-page {
-  display: grid;
-  grid-template-columns: auto 1fr;
-  gap: 16px;
-  padding-top: 16px;
+@media screen and (min-width: 1200px) {
+  .calendar-page {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    gap: 16px;
+    padding-top: 16px;
+  }
+  .event-card {
+    margin-bottom: 16px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .calendar-left {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .calendar-left {
+    display: flex;
+    gap: 16px;
+    flex-direction: column;
+    margin-bottom: 16px;
+    margin-top: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .calendar-left {
+    display: none;
+  }
 }
 
 .new-event {
   margin-bottom: 16px;
 }
 
-.event-card {
-  margin-bottom: 16px;
-}
-
 .my-filter {
   display: flex;
   gap: 8px;
-  margin-bottom: 8px;
+  padding: 8px 0;
+  cursor: pointer;
 }
