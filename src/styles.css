@@ -1,6 +1,32 @@
 /*@import "~flatpickr/dist/flatpickr.min.css";*/
 
 /* You can add global styles to this file, and also import other style files */
+
+:root {
+  --primary-color: #85af7a;
+  --primary-color-hover: #6b9360;
+  --primary-color-background: #6aa45a2f;
+  --secondary-color: #6c757d;
+  --success-color: #28a745;
+  --info-color: #17a2b8;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --light-color: #f8f9fa;
+  --dark-color: #343a40;
+  --hover-light: #f3f3f3;
+  --text-color-light: #6c757d;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+
+  --font-size-base: 1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-sm: 0.875rem;
+
+  --br: 8px;
+}
+
 body {
   font-family: "Roboto", sans-serif;
   margin: 0;
@@ -65,10 +91,12 @@ body {
 }
 
 .card-body {
-  padding-left: 16px;
-  padding-right: 16px;
-  padding-bottom: 16px;
+  padding: 16px;
   flex: 1;
+}
+
+.card-header + .card-body {
+  padding-top: 0;
 }
 
 .card-footer {
@@ -200,27 +228,37 @@ div:hover::-webkit-scrollbar-thumb {
   border: none;
 }
 
-:root {
-  --primary-color: #85af7a;
-  --primary-color-hover: #6b9360;
-  --primary-color-background: #6aa45a2f;
-  --secondary-color: #6c757d;
-  --success-color: #28a745;
-  --info-color: #17a2b8;
-  --warning-color: #ffc107;
-  --danger-color: #dc3545;
-  --light-color: #f8f9fa;
-  --dark-color: #343a40;
-  --hover-light: #f3f3f3;
-  --text-color-light: #6c757d;
-  --breakpoint-sm: 576px;
-  --breakpoint-md: 768px;
-  --breakpoint-lg: 992px;
-  --breakpoint-xl: 1200px;
+.flatpickr-calendar {
+  box-shadow: none !important;
+}
 
-  --font-size-base: 1rem;
-  --font-size-lg: 1.25rem;
-  --font-size-sm: 0.875rem;
-
-  --br: 8px;
+input[type="checkbox"] {
+  position: relative;
+  cursor: pointer;
+}
+input[type="checkbox"]:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  top: -2px;
+  left: -2px;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--hover-light);
+}
+input[type="checkbox"]:checked:after {
+  content: "";
+  display: block;
+  width: 4px;
+  height: 10px;
+  border: solid rgba(0, 0, 0, 0.5);
+  border-width: 0 2px 2px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+  position: absolute;
+  top: 0px;
+  left: 4px;
 }

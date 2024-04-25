@@ -5,3 +5,24 @@
   padding: 16px;
   margin-bottom: 16px;
 }
+
+.calendar-page {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 16px;
+  padding-top: 16px;
+}
+
+.new-event {
+  margin-bottom: 16px;
+}
+
+.event-card {
+  margin-bottom: 16px;
+}
+
+.my-filter {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}

@@ -1,11 +1,35 @@
-<div class="calendar-container">
-  <div class="card">
-    <div class="card-header">
-      <h2>Calendar</h2>
+<div [class.calendar-page]="pathName === '/calendar'">
+  @if (pathName === '/calendar') {
+  <div>
+    <div class="card-container event-card">
+      <div class="card-body">
+        <button class="my-button new-event w-100">New Event</button>
+        <app-datepicker></app-datepicker>
+      </div>
     </div>
-    <div class="card-body">
-      <app-datepicker></app-datepicker>
+    <div class="card-container">
+      <div class="card-header">
+        <h3 class="card-title">Event Filters</h3>
+      </div>
+      <div class="card-body">
+        @for (filter of filters; track $index) {
+        <div class="my-filter">
+          <input
+            type="checkbox"
+            id="filter-{{ $index }}"
+            name="filter-{{ $index }}"
+            [checked]="filter.checked"
+          />
+          <label for="filter-{{ $index }}">{{ filter.text }}</label>
+        </div>
+        }
+      </div>
     </div>
   </div>
-  <full-calendar [options]="calendarOptions"></full-calendar>
+  }
+
+  <full-calendar
+    class="calendar-container"
+    [options]="calendarOptions"
+  ></full-calendar>
 </div>
