@@ -1,0 +1,32 @@
+<div class="sidebar-container">
+  <div class="sidebar">
+    <div>
+      <div class="sidebar-header">
+        <h1>Harmony</h1>
+      </div>
+      <nav class="sidebar-content">
+        <ul>
+          @for (route of routes; track $index) {
+          <li [routerLink]="route.path" routerLinkActive="router-active">
+            <ng-icon class="route-icon" size="16" [name]="route.icon"></ng-icon>
+            <a>{{ route.name }}</a>
+          </li>
+          }
+        </ul>
+      </nav>
+    </div>
+
+    <div class="sidebar-bottom">
+      <div class="user-profile-area">
+        <img
+          class="user-profile-image"
+          src="https://via.placeholder.com/32"
+          alt="User Profile Image"
+        />
+        <div class="user-profile-name">John Doe</div>
+      </div>
+
+      <i>cog</i>
+    </div>
+  </div>
+</div>

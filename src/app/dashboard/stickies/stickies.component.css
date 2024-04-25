@@ -1,0 +1,38 @@
+.sticky-container {
+  border-radius: var(--br);
+  overflow: hidden;
+  background-color: #fff2ac;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.sticky-header {
+  padding: 1rem;
+}
+
+.sticky-title {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.sticky-body {
+  padding-left: 16px;
+  padding-right: 16px;
+  padding-bottom: 16px;
+  flex: 1;
+}
+
+.sticky-text-field {
+  width: 100%;
+  background-color: transparent;
+  border-radius: var(--br);
+  padding: 12px 12px;
+  font-size: 1rem !important;
+  box-sizing: border-box;
+  resize: none;
+
+  box-shadow: none !important;
+  border: 1px solid rgba(0, 0, 0, 0.25) !important;
+  outline: none !important;
+}

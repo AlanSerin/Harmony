@@ -1,0 +1,26 @@
+<div class="messages-container">
+  <div class="messages-header">
+    <ng-icon size="40" name="bootstrapPersonCircle"></ng-icon>
+    <div>
+      <div class="sender-name">Elifim</div>
+      <div class="sender-last-seen">Last seen today at 19:42</div>
+    </div>
+  </div>
+  <div class="messages-body">
+    @for (message of messages; track $index) {
+    <div class="message" [class.my-message]="message.sender === 'John'">
+      <div class="message-content">
+        <span>{{ message.text }} </span
+        ><span class="d-hidden">{{ message.time }}</span>
+      </div>
+
+      <div class="message-time">{{ message.time }}</div>
+    </div>
+    }
+  </div>
+  <div class="messages-footer">
+    <ng-icon class="message-plus" size="40" name="bootstrapPlus"></ng-icon>
+    <input class="my-text-field" placeholder="Type Message Here" type="text" />
+    <button class="my-button">Send</button>
+  </div>
+</div>

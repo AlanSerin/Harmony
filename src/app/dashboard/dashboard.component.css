@@ -1,0 +1,20 @@
+.dashboard-widgets {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 400px;
+  gap: 16px;
+  margin-bottom: 16px;
+  margin-top: 16px;
+}
+
+@media screen and (min-width: 992px) {
+  .dashboard-widgets {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .dashboard-widgets {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+}

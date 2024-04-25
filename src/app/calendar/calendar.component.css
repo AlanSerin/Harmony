@@ -1,0 +1,7 @@
+.calendar-container {
+  border-radius: var(--br);
+  overflow: hidden;
+  background-color: white;
+  padding: 16px;
+  margin-bottom: 16px;
+}

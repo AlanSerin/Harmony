@@ -1,0 +1,14 @@
+.my-datepicker {
+  /*width: 100%;
+  background-color: var(--hover-light);
+  border-radius: var(--br);
+  padding: 12px 12px;
+  font-size: 1rem !important;
+  box-sizing: border-box;
+  resize: none;
+
+  box-shadow: none !important;
+  border: none !important;
+  outline: none !important;*/
+  display: none;
+}

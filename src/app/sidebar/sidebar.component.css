@@ -1,0 +1,75 @@
+.sidebar-container {
+  background-color: white;
+  height: 100%;
+  overflow-y: scroll;
+  padding: 12px;
+  box-sizing: border-box;
+}
+.sidebar-header {
+  margin-bottom: 24px;
+}
+.sidebar-header h1 {
+  font-size: 1.5rem;
+  margin: 0;
+  color: var(--primary-color);
+}
+
+.sidebar-content ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.sidebar-content li {
+  padding: 12px;
+  border-radius: var(--br);
+  margin-bottom: 4px;
+  display: flex;
+  align-items: flex-start;
+}
+
+.sidebar-content li a {
+  text-decoration: none;
+  color: var(--dark-color);
+}
+
+.route-icon {
+  margin-right: 8px;
+}
+
+.sidebar-content li:active {
+  background-color: var(--primary-color-background);
+  color: var(--primary-color);
+}
+
+.sidebar-content li:hover {
+  background-color: var(--hover-light);
+  cursor: pointer;
+}
+
+.sidebar {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.sidebar-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.user-profile-area {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.router-active {
+  background-color: var(--primary-color-background) !important;
+  color: var(--primary-color) !important;
+}
+
+.router-active a {
+  color: var(--primary-color) !important;
+}
