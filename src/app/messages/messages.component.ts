@@ -14,6 +14,8 @@ import {
   styleUrl: './messages.component.css',
 })
 export class MessagesComponent {
+  pathName = window.location.pathname;
+
   messages: Message[] = [
     { text: 'Hello, how are you?', sender: 'John', time: '10:00' },
     { text: 'I am fine, thank you.', sender: 'Jane', time: '10:01' },

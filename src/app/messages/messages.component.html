@@ -1,4 +1,7 @@
-<div class="messages-container">
+<div
+  [class.messages-page]="pathName === '/messages'"
+  class="messages-container"
+>
   <div class="messages-header">
     <ng-icon size="40" name="bootstrapPersonCircle"></ng-icon>
     <div>

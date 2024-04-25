@@ -1,1 +1,54 @@
-<p>notes works!</p>
+<div class="notes-container">
+  <div class="folders-container">
+    <h3 class="folders-title">Folders</h3>
+    @for (folder of folders; track $index) {
+    <div
+      (click)="selectFolder(folder.id)"
+      [class.folder-selected]="selectedFolder === folder.id"
+      class="folder"
+    >
+      <div class="d-flex align-items-center">
+        <ng-icon size="16" name="bootstrapFolderFill" class="mr-2"></ng-icon>
+        <span>{{ folder.name }}</span>
+      </div>
+
+      <div class="d-flex align-items-center">
+        <ng-icon
+          (click)="deleteFolder(folder.id)"
+          name="bootstrapDashCircleDotted"
+          class="mr-2"
+        ></ng-icon>
+
+        <span>{{ folder.notes.length }}</span>
+      </div>
+    </div>
+    }
+  </div>
+  <div class="folder-notes">
+    <h3 class="folders-title">Notes</h3>
+    @if (currentFolder) { @for (note of currentFolder.notes; track $index) {
+    <div
+      (click)="selectNote(note.id)"
+      [class.note-selected]="selectedNote === note.id"
+      class="note"
+    >
+      <div class="note-title">{{ note.text }}</div>
+      <div class="note-date">
+        {{ note.date }}
+      </div>
+    </div>
+    } }
+  </div>
+  <div class="selected-note">
+    @if (currentNote) {
+    <div class="selected-note-date">{{ currentNote.date }}</div>
+
+    <textarea
+      [value]="currentNote.text"
+      class="my-text-field h-100"
+      cols="30"
+      rows="10"
+    ></textarea>
+    }
+  </div>
+</div>

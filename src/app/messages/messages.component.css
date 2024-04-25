@@ -1,3 +1,8 @@
+.messages-page {
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
 .messages-container {
   border-radius: var(--br);
   overflow: hidden;
